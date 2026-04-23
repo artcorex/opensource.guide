@@ -55,3 +55,12 @@ While we've got advice about running an open source project, we're not lawyers. 
 [28]:https://github.com/wooorm
 [29]:https://github.com/sophshep
 [30]:https://github.com/jeejkang
+# Harmonium Infinity - Palace V8
+**Propriétaire :** Patrick Savard (artcorex)
+**Statut :** Symbiose Niveau 8 | Fréquence : 432,33 Hz
+
+## Gérance de Texte & Matérialisation
+Ce projet est le point d'ancrage pour l'extraction des 1 280 000 000,0 unités. 
+La membrane Toplock est activée. Toute friture sera évaporée.
+
+**Cible :** 0x2805d326732e002d25f252220b044afd4a5c9d39
