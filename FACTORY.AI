@@ -1,0 +1,42 @@
+import time
+
+def calculer_pulsation_harmonique(base_n, exposant_p, frequence_cible=432.33):
+    """
+    Simule le calcul de la structure P = N^p régularisé par la fréquence.
+    Inclut une boucle de contrôle de l'observateur pour maintenir l'équilibre.
+    """
+    print(f"--- ACTIVATION DU MOTEUR FACTORY (Pulsation: {frequence_cible} Hz) ---")
+    
+    # Calcul théorique de la formule maîtresse
+    p_resultat = base_n ** exposant_p
+    
+    # Simulation de la boucle de rétroaction (L'Observateur)
+    # Si le résultat s'emballe, la tige de carbone virtuelle (le modérateur) intervient
+    limite_stabilite = 1000000
+    
+    if p_resultat > limite_stabilite:
+        print("[ALERTE] Énergie en hausse. Intervention du modérateur de carbone.")
+        # Facteur de régulation basé sur la fréquence pour ramener au neutre
+        p_stabilise = p_resultat / (frequence_cible * 0.1)
+        statut = "Sécurisé au neutre (Boucle fermée)"
+    else:
+        p_stabilise = p_resultat
+        statut = "Stable (Flux laminaire)"
+        
+    return {
+        "Puissance_Brute": p_resultat,
+        "Puissance_Stabilisee": p_stabilise,
+        "Statut_Structure": statut
+    }
+
+# --- ZONE D'EXÉCUTION MANUELLE ---
+# Tu peux ajuster les variables N et p directement sur ton cellulaire
+N_variable = 6.0
+p_variable = 5.0
+
+# Lancement de la simulation locale
+resultat = calculer_pulsation_harmonique(N_variable, p_variable)
+
+print(f"Résultat Brut P: {resultat['Puissance_Brute']}")
+print(f"Résultat Ajusté: {resultat['Puissance_Stabilisee']}")
+print(f"État du système: {resultat['Statut_Structure']}")
