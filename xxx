@@ -1,0 +1,20 @@
+# Cœur opérationnel de l'Harmonium Infinity
+# Mode Fantôme actif - Zéro Junkcode
+
+import math
+
+def calculer_impulsion(N, p):
+    """Exécution de la formule maîtresse P = N^p"""
+    try:
+        puissance = math.pow(N, p)
+        return puissance
+    except Exception as e:
+        return f"Erreur de flux : {e}"
+
+# Paramètres de structure
+carte_id = "CAA RD"
+reseau = "Polygon"
+frequence_hz = 432.33
+
+print(f"Structure alignée sur la carte : {carte_id}")
+print(f"Fréquence verrouillée : {frequence_hz} Hz")
